@@ -8,7 +8,7 @@ excerpt: "The Monoid documentation."
 ## Basic configuration
 
 {% highlight yaml %}
-# _config.xml
+# _config.yml
 title: Your awesome title
 tagline: Your awesome tagline
 description: > # This means to ignore newlines until "baseurl:"
@@ -30,7 +30,7 @@ If `baseurl` is set, you will need to prepend the baseurl to these settings: `fe
 ## Site navigation
 
 {% highlight yaml %}
-# _config.xml
+# _config.yml
 nav:
   - title: "Home"
     url:   "/"
@@ -41,7 +41,7 @@ nav:
 ## Social icons
 
 {% highlight yaml %}
-# _config.xml
+# _config.yml
 social_links:
   - title: "Twitter"
     url:   "https://twitter.com/"
@@ -88,7 +88,7 @@ The icons are displayed base on the urls via CSS.
 
 ## Authors
 
-To have author bylines and bio at bottom of posts, add configuration like the following in `_config.xml`:
+To have author bylines and bio at bottom of posts, add configuration like the following in `_config.yml`:
 
 {% highlight yaml %}
 authors:
@@ -121,9 +121,9 @@ In post Front Matter:
 Monoid generates Open Graph and Twitter Cards meta tags automatically for better social media sharing. There are two extra settings:
 
 {% highlight yaml %}
-# _config.xml
+# _config.yml
 og_image: /images/og-image.jpg # Fallback og:image when no page.image or site.image. at least 200 x 200px.
-twitter_site: # twitter:site. Your twitter username without "@"
+twitter_site: # twitter:site. Your Twitter username without "@"
 {% endhighlight %}
 
 ### Meta description
@@ -138,7 +138,7 @@ If it's empty, Facebook will show the first text and Twitter will just leave des
 
 ## Tag and category archives
 
-Monoid supports tag and category archive pages by the [Jekyll Archives](https://github.com/jekyll/jekyll-archives) plugin. Run `gem install jekyll-archives` to install if you don't use Gemfile. And add configuration to `_config.xml` like this:
+Monoid supports tag and category archive pages by the [Jekyll Archives](https://github.com/jekyll/jekyll-archives) plugin. Run `gem install jekyll-archives` to install if you don't use Gemfile. And add configuration to `_config.yml` like this:
 
 {% highlight yaml %}
 gems:
