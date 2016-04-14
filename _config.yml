@@ -95,11 +95,17 @@ authors:
 og_image: # Fallback og:image when no page.image or site.image. at least 200 x 200px.
 twitter_site: # twitter:site. Your Twitter username without "@"
 
+gems:
+  - jekyll-paginate
+#  - jekyll-archives
+
 # "Archive pages for your Jekyll tags and categories."
 # https://github.com/jekyll/jekyll-archives
-# gems:
-#   - jekyll-archives
 # jekyll-archives:
 #   enabled:
 #     - categories
 #     - tags
+
+markdown: kramdown
+kramdown:
+  input: GFM
