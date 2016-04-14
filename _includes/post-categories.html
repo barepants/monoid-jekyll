@@ -1,0 +1,11 @@
+{% if include.post.categories != empty and site.jekyll-archives.enabled contains 'categories' or site.jekyll-archives.enabled == 'all' %}
+  <div class="post-categories">
+    {% for category in include.post.categories %}
+      {% assign category_slug = category | slugify %}
+      {% if category_slug != '' %}
+        {% assign category_url = site.jekyll-archives.permalinks.category | replace: ':name', category_slug | prepend: site.baseurl %}
+        <a href="{{ category_url }}">{{ category }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

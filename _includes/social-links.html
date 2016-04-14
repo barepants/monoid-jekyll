@@ -1,0 +1,19 @@
+{% if site.social_links %}
+  <ul class="social-links social-icons">
+    {% for link in site.social_links %}
+      {% assign url = link.url %}
+      {% if link.title == "RSS" %}
+        {% if site.feed %}
+          {% assign url = site.feed %}
+        {% else %}
+          {% assign url = "/feed.xml" | prepend: site.baseurl | prepend: site.url %}
+        {% endif %}
+      {% endif %}
+      <li>
+        <a href="{{ url }}">
+          <span class="visuallyhidden">{{ link.title }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}

@@ -1,0 +1,105 @@
+title: Your awesome title
+tagline: Your awesome tagline
+description: > # This means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # The subpath of your site, e.g. /blog
+url: "http://yourdomain.com" # The base hostname & protocol for your site
+image: /images/site-image.jpg # The site cover image on the home page
+feed: # Set it if your feed path is not /feed.xml, e.g. /atom.xml
+paginate: 10 # http://jekyllrb.com/docs/pagination/
+
+disqus_shortname:
+google_analytics_tracking_id:
+
+# Site navigation
+nav:
+  - title: "Home"
+    url:   "/"
+  - title: "Documentation"
+    url:   "/docs/"
+
+social_links:
+  - title: "Twitter"
+    url:   "https://twitter.com/"
+  - title: "Facebook"
+    url:   "https://www.facebook.com/"
+  - title: "Google+"
+    url:   "https://plus.google.com/"
+  - title: "RSS" # Just leave the "RSS" title, the url is generated in the HTML
+                 # template (site.baseurl + "feed.xml" or site.feed).
+  # - title: "Behance"
+  #   url:   "https://www.behance.net/"
+  # - title: "Bitbucket"
+  #   url:   "https://bitbucket.org/"
+  # - title: "CodePen"
+  #   url:   "http://codepen.io/"
+  # - title: "Dribbble"
+  #   url:   "https://dribbble.com/"
+  # - title: "Flickr"
+  #   url:   "https://www.flickr.com/"
+  # - title: "Foursquare"
+  #   url:   "https://foursquare.com/"
+  # - title: "Github"
+  #   url:   "https://github.com/"
+  # - title: "Instagram"
+  #   url:   "http://instagram.com/"
+  # - title: "JSFiddle"
+  #   url:   "http://jsfiddle.net/"
+  # - title: "LinkedIn"
+  #   url:   "https://www.linkedin.com/"
+  # - title: "Email"
+  #   url:   "mailto:me@example.com"
+  # - title: "Medium"
+  #   url:   "https://medium.com/"
+  # - title: "Pinterest"
+  #   url:   "https://www.pinterest.com/"
+  # - title: "SoundCloud"
+  #   url:   "https://soundcloud.com/"
+  # - title: "reddit"
+  #   url:   "http://www.reddit.com/"
+  # - title: "Spotify"
+  #   url:   "https://play.spotify.com/"
+  # - title: "Stack Exchange"
+  #   url:   "http://stackexchange.com/"
+  # - title: "Stack Overflow"
+  #   url:   "http://stackoverflow.com/"
+  # - title: "Steam"
+  #   url:   "http://steamcommunity.com/"
+  # - title: "StumbleUpon"
+  #   url:   "http://www.stumbleupon.com/"
+  # - title: "Trello"
+  #   url:   "https://trello.com/"
+  # - title: "Tumblr"
+  #   url:   "https://www.tumblr.com/"
+  # - title: "Twitch"
+  #   url:   "http://www.twitch.tv/"
+  # - title: "Vimeo"
+  #   url:   "https://vimeo.com/"
+  # - title: "WordPress"
+  #   url:   "https://wordpress.com/"
+  # - title: "YouTube"
+  #   url:   "http://www.youtube.com/"
+
+authors:
+  johndoe:
+    name: John Doe
+    website: https://twitter.com/
+    bio: An awesome bio # Author info at bottom of post only shows if bio exists
+    avatar: /images/avatar.jpg
+  joebloggs:
+    name: Joe Bloggs
+
+# Extra Open Graph and Twitter Cards settings for social sharing
+og_image: # Fallback og:image when no page.image or site.image. at least 200 x 200px.
+twitter_site: # twitter:site. Your Twitter username without "@"
+
+# "Archive pages for your Jekyll tags and categories."
+# https://github.com/jekyll/jekyll-archives
+# gems:
+#   - jekyll-archives
+# jekyll-archives:
+#   enabled:
+#     - categories
+#     - tags

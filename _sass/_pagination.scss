@@ -1,0 +1,25 @@
+.pagination {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+
+  @include breakpoint(small) {
+    margin-bottom: 60px;
+  }
+}
+
+.pagination-older,
+.pagination-newer {
+  margin: -10px;
+  padding: 10px;
+}
+
+.pagination-older {
+  float: right;
+}
+
+.pagination-newer {
+  float: left;
+}

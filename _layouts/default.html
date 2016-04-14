@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <h1 class="site-title">
+        <a href="{{ site.baseurl }}/">{{ site.title | xml_escape }}</a>
+      </h1>
+      {% include site-nav-toggle.html %}
+    </div>
+    {% include site-nav.html %}
+  </header>
+
+  <main role="main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    {% include social-links.html %}
+    <div class="container">
+      © {{ site.time | date: "%Y" }} {{ site.title | xml_escape }}
+    </div>
+  </footer>
+
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+  <script>
+    var $siteNav = $('#site-nav');
+    var $siteNavToggle = $('.site-nav-toggle');
+    var $siteNavToggleIcon = $('.site-nav-toggle .fa');
+
+    $siteNavToggle.click(function () {
+      $siteNav.toggleClass('is-toggled');
+      $siteNavToggleIcon.toggleClass('fa-times').toggleClass('fa-bars');
+      if ($siteNav.hasClass('is-toggled')) {
+        $siteNav.attr('aria-expanded', true);
+        $siteNavToggle.attr('aria-expanded', true);
+      } else {
+        $siteNav.attr('aria-expanded', 'false');
+        $siteNavToggle.attr('aria-expanded', 'false');
+      }
+    });
+
+    $('.post-content').fitVids();
+  </script>
+
+</body>
+</html>

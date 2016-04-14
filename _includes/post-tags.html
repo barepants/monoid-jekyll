@@ -1,0 +1,13 @@
+{% if include.post.tags != empty and site.jekyll-archives.enabled contains 'tags' or site.jekyll-archives.enabled == 'all' %}
+  <li class="post-tags">
+    <ul>
+    {% for tag in include.post.tags %}
+      {% assign tag_slug = tag | slugify %}
+      {% if tag_slug != '' %}
+        {% assign tag_url = site.jekyll-archives.permalinks.tag | replace: ':name', tag_slug | prepend: site.baseurl %}
+        <li><a href="{{ tag_url }}">{{ tag }}</a></li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </li>
+{% endif %}

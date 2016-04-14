@@ -1,0 +1,26 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+
+// For RSS icon in _sass/utilities.scss
+{% if site.feed %}
+  {% assign feed = site.feed %}
+{% else %}
+  {% assign feed = "/feed.xml" | prepend: site.baseurl | prepend: site.url %}
+{% endif %}
+$feed: "{{ feed }}";
+
+@import "fa-variables"; // Font Awesome icons
+@import "mixins";
+@import "normalize";
+@import "base";
+@import "header";
+@import "footer";
+@import "sticky-footer";
+@import "navigation";
+@import "pagination";
+@import "posts";
+@import "archive";
+@import "highlight";
+@import "utilities";

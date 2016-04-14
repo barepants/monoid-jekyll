@@ -1,0 +1,87 @@
+.site-header {
+  @include gradient-line(middle, #eee);
+
+  border-top: 5px solid #2a2a2a;
+
+  > .container {
+    padding-bottom: 30px;
+    padding-top: 30px;
+    position: relative;
+
+    @include breakpoint(small) {
+      padding-bottom: 40px;
+      padding-top: 40px;
+    }
+  }
+}
+
+.site-title {
+  color: #222;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0 23px;
+  text-align: center;
+  text-transform: uppercase;
+
+  a {
+    background-color: #fff;
+    color: inherit;
+    display: inline-block;
+    padding: 0 15px;
+    vertical-align: middle;
+
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  img {
+    height: 40px;
+    width: auto;
+  }
+}
+
+.site-tagline {
+  @include gradient-line(bottom, #eee);
+
+  color: #222;
+  display: table;
+  font-size: 16px;
+  font-weight: bold;
+  height: 100%;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  padding: 0 0 35px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+
+  .site-image & {
+    color: #fff;
+    padding: 0 20px;
+
+    @include breakpoint(small) {
+      font-size: 18px;
+    }
+    @include breakpoint(medium) {
+      padding: 0 50px;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.site-image {
+  background-position: center;
+  background-size: cover;
+  height: 265px;
+  margin: 0 -20px;
+
+  @include breakpoint(small) {
+    height: 380px;
+  }
+}

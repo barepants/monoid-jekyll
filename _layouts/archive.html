@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+
+<div class="container">
+  <div class="archive-header">
+    <h1 class="archive-title">
+      {% case page.type %}
+      {% when 'year' %}
+        <small>Posts from</small> {{ page.date | date: '%Y' }}
+      {% when 'month' %}
+        <small>Posts from</small> {{ page.date | date: '%B %Y' }}
+      {% when 'day' %}
+        <small>Posts from</small> {{ page.date | date: '%B %-d, %Y' }}
+      {% else %}
+        <small>Posts in</small> {{ page.title | xml_escape }}
+      {% endcase %}
+    </h1>
+  </div>
+  <ul class="archive-list">
+    {% for post in page.posts %}
+      <li>
+        <time class="archive-post-date" datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%B %-d, %Y" }}
+        </time>
+        <h2 class="archive-post-title">
+          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+            {{ post.title | xml_escape }}
+          </a>
+        </h2>
+
+      </li>
+    {% endfor %}
+  </ul>
+</div>

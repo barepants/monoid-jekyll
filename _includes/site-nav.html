@@ -1,0 +1,9 @@
+{% if site.nav %}
+  <nav id="site-nav" class="site-nav" role="navigation" aria-expanded="false">
+    <ul class="site-nav-list">
+      {% for link in site.nav %}
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+{% endif %}
