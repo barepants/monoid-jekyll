@@ -14,11 +14,9 @@ disqus_shortname:
 google_analytics_tracking_id:
 
 # Site navigation
-nav:
-  - title: "Home"
-    url:   "/"
-  - title: "Documentation"
-    url:   "/docs/"
+# nav:
+#   - title: "Home"
+#     url:   "/"
 
 social_links:
   - title: "Twitter"

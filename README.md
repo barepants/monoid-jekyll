@@ -1,13 +1,11 @@
----
-layout: page
-title:  "Documentation"
-permalink: /docs/
-excerpt: "The Monoid documentation."
----
+# Monoid
+
+A [Jekyll](https://jekyllrb.com/) theme.
+
 
 ## Basic configuration
 
-{% highlight yaml %}
+```yml
 # _config.yml
 title: Your awesome title
 tagline: Your awesome tagline
@@ -23,24 +21,26 @@ paginate: 10 # http://jekyllrb.com/docs/pagination/
 
 disqus_shortname:
 google_analytics_tracking_id:
-{% endhighlight %}
+```
 
 If `baseurl` is set, you will need to prepend the baseurl to these settings: `feed`, `nav` urls, `og_image`, post cover images, and post thumbnails, e.g. `feed: /blog/feed/`.
 
+
 ## Site navigation
 
-{% highlight yaml %}
+```yml
 # _config.yml
 nav:
   - title: "Home"
     url:   "/"
   - title: "Documentation"
     url:   "/docs/"
-{% endhighlight %}
+```
+
 
 ## Social icons
 
-{% highlight yaml %}
+```yml
 # _config.yml
 social_links:
   - title: "Twitter"
@@ -49,7 +49,7 @@ social_links:
     url:   "https://www.facebook.com/"
   - title: "Google+"
     url:   "https://plus.google.com/"
-{% endhighlight %}
+```
 
 The social links in the footer. The following sites are supported:
 
@@ -86,11 +86,12 @@ The social links in the footer. The following sites are supported:
 
 The icons are displayed base on the urls via CSS.
 
+
 ## Authors
 
 To have author bylines and bio at bottom of posts, add configuration like the following in `_config.yml`:
 
-{% highlight yaml %}
+```yml
 authors:
   johndoe:
     name: John Doe
@@ -99,13 +100,14 @@ authors:
     avatar: /images/avatar.jpg
   joebloggs:
     name: Joe Bloggs
-{% endhighlight %}
+```
 
 and specify the author in the Front Matter of posts:
 
     ---
     author: johndoe
     ---
+
 
 ## Post cover images and thumbnails
 
@@ -116,15 +118,16 @@ In post Front Matter:
     thumbnail: /images/post-thumbnail.jpg
     ---
 
+
 ## Social meta tags
 
 Monoid generates Open Graph and Twitter Cards meta tags automatically for better social media sharing. There are two extra settings:
 
-{% highlight yaml %}
+```
 # _config.yml
 og_image: /images/og-image.jpg # Fallback og:image when no page.image or site.image. at least 200 x 200px.
 twitter_site: # twitter:site. Your Twitter username without "@"
-{% endhighlight %}
+```
 
 ### Meta description
 
@@ -136,16 +139,23 @@ twitter_site: # twitter:site. Your Twitter username without "@"
 
 If it's empty, Facebook will show the first text and Twitter will just leave description empty.
 
+
 ## Tag and category archives
 
 Monoid supports tag and category archive pages by the [Jekyll Archives](https://github.com/jekyll/jekyll-archives) plugin. Run `gem install jekyll-archives` to install if you don't use Gemfile. And add configuration to `_config.yml` like this:
 
-{% highlight yaml %}
+```
 gems:
+  - jekyll-paginate
   - jekyll-archives
 
 jekyll-archives:
   enabled:
     - categories
     - tags
-{% endhighlight %}
+```
+
+
+## License
+
+[CC0](LICENSE)
